@@ -52,13 +52,13 @@ function vis() {
   json.forEach(slik => {
     // console.log("Kategori", ret.kategori);
 
-    if (filter == slik.kategori || filter == "alle") {
+    if (filter == slik.Kategori || filter == "alle") {
       const klon = temp.cloneNode(true);
 
 
       klon.querySelector("h3").textContent = slik.Navn;
       klon.querySelector(".besk").textContent = slik.Beskrivelse;
-      klon.querySelector(".pris").textContent = `Pris: ${slik.Pris},-`;
+      klon.querySelector(".pris").textContent = `Pris: ${slik.Pris}/kg,-`;
       klon.querySelector("img").src = `galleri/${slik.Billede}`;
       klon.querySelector("article").addEventListener("click", () => visDetaljer(slik));
       container.appendChild(klon);

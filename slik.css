@@ -1,12 +1,35 @@
-body{
-    background-color: rgb(130, 130, 238);
-    display: grid;
-    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+@import url("https://use.typekit.net/twq8ott.css");
+
+    body{
+        margin: 0;
+        background-repeat: no-repeat;
+        background-image: repeating-linear-gradient(-45deg, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0.1) 100px, white 100px, white 200px);
+    }   
+
+    header {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    header img {
+        height: 200px;
+        background-color: white;
+        border-radius: 100%;
+        padding: 1rem;
+        margin: 1rem;
     }
 
     article{
-        padding: 10px;
         margin: 1em;
+        border: 3px solid black;
+        background-color: white;
+        border-radius: 5px;
+    }
+    
+    .text {
+        padding: 0 1rem;
     }
 
     section{
@@ -14,24 +37,22 @@ body{
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         grid-gap: 10px;
         grid-column: 2/3;
+        padding: 2rem 0;
     }
 
-    img{
+    article img {
         width: 100%;
-        border: 2px solid black;
-    }
-    p{
-        font-family: 'Karma', serif;
-
+        aspect-ratio: 1/1;
+        object-fit: cover;
     }
     
-    h2{ 
-        grid-column: 2/3;
-        margin: 1em;
-        font-family: 'Shizuru', cursive;      
-     }
-    h1, h2, h3, p{
-        font-family: 'Shizuru', cursive;      
+    p{
+        font-family: 'Karma', serif;
+        font-weight: bold;
+    }
+    
+    h1, h2, h3{
+        font-family: collector-comic, sans-serif;    
     }
 
     h1{
@@ -39,42 +60,31 @@ body{
         display: grid;
         place-content: center;
     }
-    header{
-        grid-column: 1/3;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
 
     nav {
-        grid-column: 2/3;
-       margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
     }
 
     button{
-        border:2px pink;
-        color: aqua;
-        background: none;
-        text-decoration: underline;
-        cursor: pointer;
-        font-family: 'Shizuru', cursive;      
-        transition: 0.2s;
-        font-size: 2em;
-        
-    
-    }
-
-    header img {
-        grid-column: 1/3;
+        background-color: #B7EDA3;
         border: none;
+        border-radius: 2rem;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        font-family: collector-comic, sans-serif;    
+        font-size: 1.5rem;
+        transition: 350ms;
     }
 
-    button:hover{
-        color: blue;
-
+    button:hover {
+        background-color: pink;
     }
 
     .valgt{
-        color: pink;
+        background-color: pink;
     }
 
     #modal{
@@ -91,8 +101,16 @@ body{
     #modal article{
         max-width: 900px;
         margin: 2em auto;
-
         background-color: pink;
     }
 
+    footer {
+        background-color: #B7EDA3;
+        height: 250px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
  
