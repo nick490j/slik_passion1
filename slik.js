@@ -43,7 +43,7 @@ let filter = "alle";
 function vis() {
 
   //Forbindelse til HTML Elementer
-  const container = document.querySelector("section");
+  const container = document.querySelector("#shop_items");
   const temp = document.querySelector("template").content;
   const modal = document.querySelector("#modal");
 
