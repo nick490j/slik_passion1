@@ -152,7 +152,7 @@
         text-align: center;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 800px) {
         .img_container {
             overflow-x: scroll;
             overflow-y: hidden;
