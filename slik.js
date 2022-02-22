@@ -1,6 +1,7 @@
 //Globale variabler
 let json;
 let filter = "alle";
+let kurvAntal = 0;
 const filterknapper = document.querySelectorAll(".sort button");
 
 //kør js når DOM er loaded
@@ -58,11 +59,25 @@ function vis() {
       klon.querySelector("img").src = `galleri/${slik.Billede}`;
       klon.querySelector(".greyed_out").addEventListener("click", () => visDetaljer(slik));
       klon.querySelector(".product_img").addEventListener("click", () => visDetaljer(slik));
+      klon.querySelector(".buy").addEventListener("click", () => updateKurv());
       container.appendChild(klon);
     }
   })
-
 };
+
+const kurv = document.querySelector(".circle")
+function updateKurv() {
+  kurvAntal++
+  kurv.textContent = kurvAntal
+  kurv.style.display = "flex"
+}
+
+document.querySelector(".shopping_cart").addEventListener("click", tømKurv)
+
+function tømKurv() {
+  kurvAntal = 0;
+  kurv.style.display = "none"
+}
 
 //detaljer i singleview//
 function visDetaljer(slik) {
