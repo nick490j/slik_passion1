@@ -1,3 +1,4 @@
+/* import adobe font */
 @import url("https://use.typekit.net/twq8ott.css");
 
     body{
@@ -8,35 +9,60 @@
 
     header {
         width: 100%;
-        height: 100%;
+        height: 300px;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        padding: 2rem 0;
+        width: 100%;
+        height: 300px;
         display: flex;
         justify-content: center;
+        transition: all 500ms 250ms, background-color 250ms, border-width 250ms;
+    }
+
+    .scrolled {
+        background-color: white;
+        border-bottom: #DBF6D1 solid 7px;
+        height: 120px;
+        padding: 0;
+        transition: all 500ms, background-color 250ms 400ms, border-width 250ms 400ms;
     }
 
     header img {
-        height: 200px;
+        height: 100%;
         background-color: white;
         border-radius: 100%;
         padding: 1rem;
-        margin: 1rem;
+        box-sizing: border-box;
     }
 
     article{
         margin: 1em;
-        border: 7px solid rgba(183, 237, 163, 0.5);
+        border: 7px solid #DBF6D1;
         background-color: white;
         border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
     }
     
     .text {
         padding: 0 1rem;
     }
 
+    .greyed_out {
+        color: grey;
+        cursor: pointer;
+    }
+
     .info {
         text-align: center;
     }
 
-    .img_container {
+    .box_container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -46,7 +72,7 @@
 
     .info_box {
         background-color: white;
-        border: 7px solid rgba(183, 237, 163, 0.5);
+        border: 7px solid #DBF6D1;
         width: 300px;
         height: 300px;
         border-radius: 100%;
@@ -73,6 +99,7 @@
         width: 100%;
         aspect-ratio: 1/1;
         object-fit: cover;
+        cursor: pointer;
     }
     
     p{
@@ -90,7 +117,7 @@
         place-content: center;
     }
 
-    nav {
+    .sort {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -106,6 +133,11 @@
         font-family: collector-comic, sans-serif;    
         font-size: 1.5rem;
         transition: 350ms;
+    }
+
+    .buy {
+        font-size: 1rem;
+        margin: auto 1rem 1rem 1rem;
     }
 
     button:hover {
@@ -152,8 +184,10 @@
         text-align: center;
     }
 
-    @media screen and (max-width: 800px) {
-        .img_container {
+
+    /* Mobil størrelse */
+    @media screen and (max-width: 775px) {
+        .box_container {
             overflow-x: scroll;
             overflow-y: hidden;
             flex-wrap: nowrap;
@@ -163,5 +197,22 @@
         }
         .text {
             width: 300px;
+        }
+        header {
+            height: 120px;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            padding: 2rem 0;
+            background-color: white;
+            border-bottom: #DBF6D1 solid 7px;
+            height: 120px;
+            padding: 0;
+            transition: all 500ms, background-color 250ms 400ms, border-width 250ms 400ms;
+        }
+    
+        .scrolled {
+            
         }
       }
