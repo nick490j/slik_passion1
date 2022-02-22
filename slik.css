@@ -1,3 +1,4 @@
+/* import adobe font */
 @import url("https://use.typekit.net/twq8ott.css");
 
     body{
@@ -52,11 +53,16 @@
         padding: 0 1rem;
     }
 
+    .greyed_out {
+        color: grey;
+        cursor: pointer;
+    }
+
     .info {
         text-align: center;
     }
 
-    .img_container {
+    .box_container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -93,6 +99,7 @@
         width: 100%;
         aspect-ratio: 1/1;
         object-fit: cover;
+        cursor: pointer;
     }
     
     p{
@@ -177,8 +184,10 @@
         text-align: center;
     }
 
+
+    /* Mobil størrelse */
     @media screen and (max-width: 775px) {
-        .img_container {
+        .box_container {
             overflow-x: scroll;
             overflow-y: hidden;
             flex-wrap: nowrap;
@@ -188,5 +197,22 @@
         }
         .text {
             width: 300px;
+        }
+        header {
+            height: 120px;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            padding: 2rem 0;
+            background-color: white;
+            border-bottom: #DBF6D1 solid 7px;
+            height: 120px;
+            padding: 0;
+            transition: all 500ms, background-color 250ms 400ms, border-width 250ms 400ms;
+        }
+    
+        .scrolled {
+            
         }
       }

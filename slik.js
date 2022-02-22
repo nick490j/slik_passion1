@@ -1,7 +1,12 @@
+//Globale variabler
+let json;
+let filter = "alle";
+const filterknapper = document.querySelectorAll(".sort button");
 
-
+//kør js når DOM er loaded
 document.addEventListener("DOMContentLoaded", start);
 
+//fetch database
 const url = "https:///passiongalleri-15c6.restdb.io/rest/slik";
 
 const options = {
@@ -17,68 +22,63 @@ async function hentData() {
   console.log(json);
 }
 
-const filterknapper = document.querySelectorAll("button");
-
-
-
+//start funktion
 function start() {
   filterknapper.forEach(knap => {
-    knap.addEventListener("click", setFilter);
+    knap.addEventListener("click", setFilter); //klik på knap
   })
   hentData();
 }
 
+//filter funktion
 function setFilter() {
-  filter = this.dataset.kategori; // Sætter variablen til det der er valgt
-  document.querySelector(".valgt").classList.remove("valgt");
-  this.classList.add("valgt")
+  filter = this.dataset.kategori; //sætter variablen til det der er valgt
+  document.querySelector(".valgt").classList.remove("valgt"); //fjerner tidligere valgte knap
+  this.classList.add("valgt") //styler valgt knap
   vis();
-  // document.querySelector("h1").textContent = this.textContent;
 }
-
-//Globale variabler
-let json;
-let filter = "alle";
 
 function vis() {
 
-  //Forbindelse til HTML Elementer
+  //forbindelse til HTML Elementer
   const container = document.querySelector("#shop_items");
   const temp = document.querySelector("template").content;
   const modal = document.querySelector("#modal");
 
-  container.textContent = ""; //Ryd container
+  container.textContent = ""; //ryd container
 
   json.forEach(slik => {
-    // console.log("Kategori", ret.kategori);
-
-    if (filter == slik.Kategori || filter == "alle") {
+    if (filter == slik.Kategori || filter == "alle") { //tjekker filter match
       const klon = temp.cloneNode(true);
 
-
+      //indhold manipulation
       klon.querySelector("h3").textContent = slik.Navn;
-      klon.querySelector(".besk").textContent = slik.Beskrivelse;
+      klon.querySelector(".besk").innerHTML = `${slik.Beskrivelse}<br><span class="greyed_out">Læs mere...</span>`;
       klon.querySelector(".pris").textContent = `Pris: ${slik.Pris}/kg,-`;
       klon.querySelector("img").src = `galleri/${slik.Billede}`;
-      klon.querySelector("article").addEventListener("click", () => visDetaljer(slik));
+      klon.querySelector(".greyed_out").addEventListener("click", () => visDetaljer(slik));
+      klon.querySelector(".product_img").addEventListener("click", () => visDetaljer(slik));
       container.appendChild(klon);
     }
   })
 
 };
+
 //detaljer i singleview//
 function visDetaljer(slik) {
   console.log(slik)
+
+  //indhold manipulation
   modal.querySelector("h2").textContent = slik.Navn;
   modal.querySelector("img").src = `galleri/${slik.Billede}`;
   modal.querySelector(".besk").textContent = slik.Beskrivelse;
   modal.querySelector(".pris").textContent = `Pris: ${slik.Pris},-`;
-
   modal.style.display = "block";
 }
 
-modal.addEventListener("click", () => (modal.style.display = "none"));
+modal.addEventListener("click", () => (modal.style.display = "none")); //skjul modal efter klik
 
+//styling af navbar ved scroll
 document.addEventListener("scroll", navStyle)
 function navStyle() {
   if (window.scrollY > 0) {
