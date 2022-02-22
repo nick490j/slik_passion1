@@ -78,3 +78,12 @@ function visDetaljer(slik) {
 }
 
 modal.addEventListener("click", () => (modal.style.display = "none"));
+
+document.addEventListener("scroll", navStyle)
+function navStyle() {
+  if (window.scrollY > 0) {
+    document.querySelector("nav").classList.add("scrolled")
+  } else {
+    document.querySelector("nav").classList.remove("scrolled")
+  }
+}
