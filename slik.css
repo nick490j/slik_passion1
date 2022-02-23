@@ -106,6 +106,12 @@
         font-family: 'Karma', serif;
         font-weight: bold;
     }
+
+    .besk {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
     
     h1, h2, h3{
         font-family: collector-comic, sans-serif;    

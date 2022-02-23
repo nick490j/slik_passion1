@@ -54,7 +54,7 @@ function vis() {
 
       //indhold manipulation
       klon.querySelector("h3").textContent = slik.Navn;
-      klon.querySelector(".besk").innerHTML = `${slik.Beskrivelse}<br><span class="greyed_out">Læs mere...</span>`;
+      klon.querySelector(".besk").innerHTML = `${slik.Beskrivelse}<br><span class="greyed_out">Læs mere</span>`;
       klon.querySelector(".pris").textContent = `Pris: ${slik.Pris}/kg,-`;
       klon.querySelector("img").src = `galleri/${slik.Billede}`;
       klon.querySelector(".greyed_out").addEventListener("click", () => visDetaljer(slik));
