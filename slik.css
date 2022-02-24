@@ -110,7 +110,7 @@
         cursor: pointer;
     }
     
-    p{
+    p, ul{
         font-family: 'Karma', serif;
         font-weight: bold;
     }
