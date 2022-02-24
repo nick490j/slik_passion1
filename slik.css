@@ -198,10 +198,11 @@
     }
 
     .two_columns p {
-        padding-right: 2rem;
+        padding-right: 1rem;
     }
 
     ul {
+        padding-left: 1rem;
         margin: 0;
         height: 100%;
         list-style: none;
@@ -322,6 +323,9 @@
         }
         .two_columns {
             display: block;
+        }
+        .two_columns p {
+            padding-right: 0;
         }
         .modal_info_box {
             border: solid black 2px;
