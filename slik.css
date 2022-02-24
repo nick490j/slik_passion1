@@ -159,6 +159,10 @@
         background-color: pink;
     }
 
+    .shopping_cart a{ 
+        margin: 0 .75rem;
+    }
+
     .buy {
         margin: auto 1rem 1rem 1rem;
     }
@@ -208,9 +212,9 @@
         align-items: center;
         position: fixed;
         right: 2rem;
-        top: 2rem;
+        top: 1rem;
         font-size: 2rem;
-        gap: 2rem;
+        gap: .5rem;
     }
 
     .fa-shopping-basket {
@@ -220,7 +224,7 @@
     .circle {
         display: none;
         position: absolute;
-        bottom: .4rem;
+        bottom: 1.25rem;
         right: .5rem;
         transform-origin: center;
         justify-content: center;
@@ -236,6 +240,12 @@
         border-radius: 50px;
     }
 
+    .flex_button {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: .5rem;
+    }
 
     /* Mobil størrelse */
     @media screen and (max-width: 775px) {
@@ -267,9 +277,18 @@
             padding: 0;
             transition: all 500ms, background-color 250ms 400ms, border-width 250ms 400ms;
         }
+      }
+
+      @media screen and (min-width: 950px) {
         .shopping_cart {
-            flex-direction: column-reverse;
             gap: 0;
-            top: 0;
+            top: 2rem;
+        }
+        .circle {
+            top: 2.25rem;
+            right: .5rem;
+        }
+        .flex_button {
+            flex-direction: row;
         }
       }
