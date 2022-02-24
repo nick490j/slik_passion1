@@ -282,6 +282,11 @@
         gap: .5rem;
     }
 
+    .gallery {
+        max-width: 1250px;
+        margin: 0 auto;
+    }
+
     .gallery img {
         width: 100px;
     }
