@@ -106,6 +106,12 @@
         font-family: 'Karma', serif;
         font-weight: bold;
     }
+
+    .besk {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
     
     h1, h2, h3{
         font-family: collector-comic, sans-serif;    
@@ -184,6 +190,36 @@
         text-align: center;
     }
 
+    .shopping_cart {
+        position: fixed;
+        right: 2rem;
+        top: 2rem;
+        font-size: 2rem;
+    }
+
+    .fa-shopping-basket {
+        padding: 1rem;
+    }
+
+    .circle {
+        display: none;
+        position: absolute;
+        bottom: .4rem;
+        right: .5rem;
+        transform-origin: center;
+        justify-content: center;
+        align-items: center;
+        padding: .25rem;
+        background-color: red;
+        color: white;
+        font-family: collector-comic, sans-serif;
+        width: auto;
+        min-width: .75rem;
+        height: .75rem;
+        font-size: .75rem;
+        border-radius: 50px;
+    }
+
 
     /* Mobil størrelse */
     @media screen and (max-width: 775px) {
@@ -210,9 +246,5 @@
             height: 120px;
             padding: 0;
             transition: all 500ms, background-color 250ms 400ms, border-width 250ms 400ms;
-        }
-    
-        .scrolled {
-            
         }
       }
