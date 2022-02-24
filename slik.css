@@ -253,6 +253,7 @@
             height: 120px;
         }
         nav {
+            justify-content: left;
             position: fixed;
             top: 0;
             padding: 2rem 0;
@@ -261,5 +262,10 @@
             height: 120px;
             padding: 0;
             transition: all 500ms, background-color 250ms 400ms, border-width 250ms 400ms;
+        }
+        .shopping_cart {
+            flex-direction: column-reverse;
+            gap: 0;
+            top: 0;
         }
       }
