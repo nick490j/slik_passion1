@@ -85,6 +85,10 @@
         align-items: center;
     }
 
+    .info_box .text {
+        font-size: 1.25rem;
+    }
+
     section {
         padding: 2rem 0;
     }
