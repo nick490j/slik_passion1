@@ -20,7 +20,7 @@
         height: 300px;
         display: flex;
         justify-content: center;
-        transition: all 500ms 250ms, background-color 250ms, border-width 250ms;
+        transition: all 500ms 200ms, background-color 250ms, border-width 250ms;
     }
 
     .scrolled {
@@ -28,7 +28,7 @@
         border-bottom: #DBF6D1 solid 7px;
         height: 120px;
         padding: 0;
-        transition: all 500ms, background-color 250ms 400ms, border-width 250ms 400ms;
+        transition: all 250ms, background-color 250ms 200ms, border-width 250ms 200ms;
     }
 
     header img {
@@ -166,7 +166,7 @@
     }
 
     #modal article{
-        max-width: 500px;
+        max-width: 900px;
         margin: 2em auto;
         background-color: pink;
     }
