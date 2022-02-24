@@ -62,7 +62,7 @@
         cursor: pointer;
     }
 
-    .info {
+    .info, .about {
         text-align: center;
     }
 
@@ -129,6 +129,10 @@
         font-size: 4rem;
         display: grid;
         place-content: center;
+    }
+
+    h2 {
+        font-size: 2rem;
     }
 
     a {
@@ -247,9 +251,18 @@
         gap: .5rem;
     }
 
+    .gallery img {
+        width: 100px;
+    }
+
+    .filur {
+        width: auto;
+        height: 180px;
+    }
+
     /* Mobil størrelse */
     @media screen and (max-width: 775px) {
-        .box_container {
+        .info .box_container {
             overflow-x: scroll;
             overflow-y: hidden;
             flex-wrap: nowrap;
