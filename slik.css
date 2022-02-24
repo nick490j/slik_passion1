@@ -192,6 +192,36 @@
         background-color: pink;
     }
 
+    .two_columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .two_columns p {
+        padding-right: 2rem;
+    }
+
+    ul {
+        margin: 0;
+        height: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+    ul li:before {
+        content: '✓ ';
+      }
+
+    .modal_info_box {
+        border: solid black 2px;
+        border-top: none;
+        border-bottom: none;
+        border-right: none;
+    }
+
     footer {
         background-color: #B7EDA3;
         display: flex;
@@ -289,6 +319,17 @@
             height: 120px;
             padding: 0;
             transition: all 500ms, background-color 250ms 400ms, border-width 250ms 400ms;
+        }
+        .two_columns {
+            display: block;
+        }
+        .modal_info_box {
+            border: solid black 2px;
+            border-left: none;
+            border-right: none;
+        }
+        ul {
+            margin: 1rem 0;
         }
       }
 
