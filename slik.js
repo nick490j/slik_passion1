@@ -72,7 +72,7 @@ function updateKurv() {
   kurv.style.display = "flex"
 }
 
-document.querySelector(".shopping_cart").addEventListener("click", tømKurv)
+document.querySelector(".fa-shopping-basket").addEventListener("click", tømKurv)
 
 function tømKurv() {
   kurvAntal = 0;
